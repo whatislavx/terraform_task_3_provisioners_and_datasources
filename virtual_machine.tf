@@ -50,7 +50,7 @@ resource "azurerm_virtual_machine" "main" {
     inline = [
       "sudo apt-get update -y",
       "sudo apt-get install -y nginx",
-      "sudo cat /home/testadmin/index.html",
+      "sudo mv /home/testadmin/index.html /var/www/html/index.html"
     ]
 
     connection {
